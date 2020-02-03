@@ -1,0 +1,17 @@
+{
+  "name": "Destinations",
+  "short_name": "Destinations",
+  "icons": [{
+    "src": "/images/ic_add_white_24px.svg",
+      "sizes": "24x24",
+      "type": "image/png"
+    },{
+    "src": "/images/ic_add_white_152px.svg",
+      "sizes": "144x144",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffff00",
+  "theme_color": "#ffff00"
+}
