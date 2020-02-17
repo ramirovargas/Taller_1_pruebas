@@ -153,12 +153,20 @@
   app.getSchedule = function(key, label) {
     console.log(key);
     console.log(label);
+    // console.log(key);
+    // console.log(label);
+    window.performance.mark("mark_start");
     var url = "https://api-ratp.pierre-grimaud.fr/v3/schedules/" + key;
 
+    var reqCnt = 0;
     var request = new XMLHttpRequest();
+
     request.onreadystatechange = function() {
+      reqCnt++;
       if (request.readyState === XMLHttpRequest.DONE) {
         if (request.status === 200) {
+          if (app.selectedTimetables == []) {
+          }
           var response = JSON.parse(request.response);
           var result = {};
           result.key = key;
@@ -174,6 +182,12 @@
     };
     request.open("GET", url);
     request.send();
+    window.performance.mark("mark_end");
+    if (reqCnt == 1) {
+      window.performance.measure("mark_test", "mark_start", "mark_end");
+      var items = window.performance.getEntriesByType("measure");
+      window.cardLoadTime = items[0].duration;
+    }
   };
 
   // Iterate all of the cards and attempt to get the latest timetable data
