@@ -4,15 +4,9 @@
   "icons": [{
     "src": "/images/ic_add_white_24px.svg",
       "sizes": "24x24",
-      "type": "image/svg"
-    },
-    {
-    "src": "/images/ic_add_white_144px.svg",
-      "sizes": "144x144",
-      "type": "image/svg"
-    },
-    {
-    "src": "https://cdn.glitch.com/e2a0e034-9f9a-4580-a573-5f1ef6da35ce%2Ficon_1_144.png?v=1580705461324",
+      "type": "image/png"
+    },{
+    "src": "images/ic_add_white_144px.svg",
       "sizes": "144x144",
       "type": "image/png"
     }],
